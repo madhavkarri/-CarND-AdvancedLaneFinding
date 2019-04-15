@@ -29,18 +29,20 @@ The goals/steps for this project are:
 
 Pipeline for test images (Interactive python file: Pipeline_Test_Images.ipynb)
 
-* Load all neceaary python imports (cell: In [313]:)
-* Implement Camera Calibration (cell: In [314]:)
-* Apply camera matrix and distortion coefficients to undistort each frame (cell: In [315]:)
-* Apply color selection binary by thresholding S-channel of HLS (cell: In [316]:)
+* Load all neceaary python imports (cell: 1)
+* Implement Camera Calibration (cell: 2)
+* Apply camera matrix and distortion coefficients to undistort each frame (function: frame_ud)
+* Apply color selection binary by thresholding S-channel of HLS (function: hls_select)
 - Apply gradient, gradient-magnitude, and gradient-direction using sobel operator
-  - Gradient Threshold (cell: In [317]:)
-  - Gradient Magnitude Threshold (cell: In [318]:)
-  - Gradient Direction Threshold (cell: In [319]:)
-* Apply masking perspective transform, and warping (cell: In [320]:)  
-* Find lane starting co-ordinates on X-axis by taking histogram of detected lane pixels on bottom-half of the warped binary output (cell: In [321]:)
-* Post establishing the starting co-ordinates, of the detected line pixels, on x-axis, implement the sliding window algorithm to detect lane line pixels through all of the image/frame (cell: In [3222]:)
-* Post detetction of lane left and right line pixels through the complete image, a polynomial fit is established for each of the lane left and right lines.
+  - Gradient Threshold (function: grad_thresh)
+  - Gradient Magnitude Threshold (function: mag_thresh)
+  - Gradient Direction Threshold (function: dir_thresh)
+* Apply masking perspective transform, and warping (function: frame_mptw)  
+* Find lane starting co-ordinates on X-axis by taking histogram of detected lane line pixels on bottom-half of the warped binary output (function: wi_hp)
+* Post establishing the starting co-ordinates, of the detected lane line pixels, on x-axis, implement the sliding window algorithm to detect lane line pixels through all of the image/frame (function: find_lane_pixels)
+* Post detetction of left and right line pixels through the complete image, a polynomial fit is established for each of the left and right lines (function: fit_polynomial)
+* Implemented band/margin search around line position from previous frame, equivalent to using a customized region of interest for each frame of video. In the unlikely case, lost track of the lines, revert back to your sliding windows search (function: search_around_poly)
+
 
 The above set of steps were repeated on the following set of images
 * Test1.jpg
