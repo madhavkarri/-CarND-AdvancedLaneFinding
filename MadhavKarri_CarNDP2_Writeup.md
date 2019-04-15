@@ -37,15 +37,20 @@ Pipeline for test images (Interactive python file: Pipeline_Test_Images.ipynb)
   - Gradient Threshold (cell: In [317]:)
   - Gradient Magnitude Threshold (cell: In [318]:)
   - Gradient Direction Threshold (cell: In [319]:)
-  
-  
+* Apply masking perspective transform, and warping (cell: In [320]:)  
+* Find lane starting co-ordinates on X-axis by taking histogram of detected lane pixels on bottom-half of the warped binary output (cell: In [321]:)
+* Post establishing the starting co-ordinates, of the detected line pixels, on x-axis, implement the sliding window algorithm to detect lane line pixels through all of the image/frame (cell: In [3222]:)
+* Post detetction of lane left and right line pixels through the complete image, a polynomial fit is established for each of the lane left and right lines.
+
 The above set of steps were repeated on the following set of images
-* solidWhiteRight.jpg
-* solidWhiteCurve.jpg
-* solidYellowLeft.jpg
-* solidYellowCurve.jpg
-* solidYellowCurve2.jpg
-* whiteCarLaneSwitch.jpg
+* Test1.jpg
+* Test2.jpg
+* Test3.jpg
+* Test4.jpg
+* Test5.jpg
+* Test6.jpg
+* Straight_lines1.jpg
+* Straight_lines2.jpg
 
 Results for solid-white-right:
 
