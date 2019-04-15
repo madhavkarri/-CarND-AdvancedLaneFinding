@@ -33,7 +33,7 @@ Pipeline for test images (Interactive python file: Pipeline_Test_Images.ipynb)
 * Implement Camera Calibration (cell: In [314]:)
 * Apply camera matrix and distortion coefficients to undistort each frame (cell: In [315]:)
 * Apply color selection binary by thresholding S-channel of HLS (cell: In [316]:)
--Apply gradient, gradient-magnitude, and gradient-direction using sobel operator
+- Apply gradient, gradient-magnitude, and gradient-direction using sobel operator
   - Gradient Threshold (cell: In [317]:)
   - Gradient Magnitude Threshold (cell: In [318]:)
   - Gradient Direction Threshold (cell: In [319]:)
