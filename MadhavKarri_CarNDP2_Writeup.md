@@ -25,11 +25,15 @@ The goals/steps for this project are:
 
 ---
 
-**Finding Lane Lines on Static Images/Frames**
+**Finding Lane Lines on Test Images/Frames**
 
-Steps/process when working on Static Images/Frames
-* Load all neceaary python imports
-* Implement Gaussian Blur and Canny Edge Detection. For a single static image/frame fine tune parameters such as kernel size, low threshold and high threshold
+Pipeline for test images (Interactive python file: Pipeline_Test_Images.ipynb)
+
+Steps/process when working on Test Images/Frames
+* Load all neceaary python imports (cell: In [313]:)
+* Implement Camera Calibration (cell: In [314]:)
+* Apply camera matrix and distortion coefficients to undistort each frame (cell: In [315]:)
+
 * Followed by Masking and P-Hough Transform to extract lines and line-cordinates
 * For the last step caculate slopes for all the line-coordinates from the previous step. Use the change in sign of slope values to segregrate lines and line-cordinates for each of the left and right lanes.
 - To draw lines 
