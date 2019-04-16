@@ -35,12 +35,16 @@ Python Code/Implementation: [Link](./MadhavKarri-Project2-Files/Pipeline_Test_Im
 * Implement Camera Calibration (cell: 2)
 * Apply camera matrix and distortion coefficients to undistort each frame (function: frame_ud)
 * Apply color selection binary by thresholding S-channel of HLS color space (function: hls_select)
+  - HLS Color Space with S-Channel was determined to be the appropriate binary for detecting yellow lane lines under varying brightness or shades
 - Apply gradient, gradient-magnitude, and gradient-direction thresholds using sobel operator
   - Gradient Threshold (function: grad_thresh)
   - Gradient Magnitude Threshold (function: mag_thresh)
   - Gradient Direction Threshold (function: dir_thresh)
-* Apply masking perspective transform, and warping (function: frame_mptw)  
+  - Gradient-x and y will result in highlighting line-edges features closer to vertical and horizontal directions respectively
+* Apply masking and perspective transform (function: frame_mptw)
+  - Masking was applied by picking 4-corner co-ordinates of a trapezoid close enough to the target area on the lane
 * Find lane starting co-ordinates on X-axis by taking histogram of detected lane line pixels on bottom-half of the warped binary output (function: wi_hp)
+  - A histogram of the lane line pixels on the bottom half of the frame/image in the target area will result in two peaks. These two peaks, corresponding to left and right lane lines, can be used as a good starting guess for the sliding window algorithm.
 * Post establishing the starting co-ordinates, of the detected lane line pixels, on x-axis, implement the sliding window algorithm to detect lane line pixels through all of the image/frame (function: find_lane_pixels)
 * Post detetction of left and right line pixels through the complete image, a polynomial fit is established for each of the left and right lines (function: fit_polynomial)
 * Implement band/margin search around line position from previous frame, equivalent to using a customized region of interest for each frame of video. In the unlikely case, lost track of the lines, revert back to sliding windows search (function: search_around_poly)
@@ -64,6 +68,8 @@ Results from Pipeline for test images on Test3.jpg are shown below:
 ![Test3_HLSBinary](./Writeup_IV/Test3_HLSBinary.jpg)
 * Apply gradient, gradient-magnitude, and gradient-direction thresholds using sobel operator
 ![Test3_GMDBinary](./Writeup_IV/Test3_GMDBinary.jpg)
+* Apply masking and perspective transform
+![Test3_MPTBinary](./Writeup_IV/Test3_MPTBinary.jpg)
 
 **Finding Lane Lines in a Video**
 
