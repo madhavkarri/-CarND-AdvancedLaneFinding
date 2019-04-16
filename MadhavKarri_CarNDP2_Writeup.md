@@ -39,10 +39,15 @@ Python Code/Implementation: [Link](./MadhavKarri-Project2-Files/Pipeline_Test_Im
   - Sequence of steps followed for camera calibration:
     - Convert image to grayscale
     - Find corners of chessboard using cv2 function "findchessboardcorners"
+    - Example: find chessboard corners-calibration12.jpg
+    ![FindChessboardCorners_TI12](./Writeup_IV/FindChessboardCorners_TI12.jpg)
     - Create object points in 3d plane and image points. Image points are corners of the chessboard determined in the previous step
     - Calibrate camera using object points and image points using cv2 function "calibrateCamera"
     - "calibrateCamera" function outputs camera calibration matrix and distortion coefficients
     - The original image can be undistorted using camera calibration matrix and distortion coefficients
+    - Final step: apply perspective transform matrix on the undistorted image to get birds eyeview
+    - Example: perspective transform-calibration12.jpg
+    ![UndistortedPerspectiveTransform_TI12](./Writeup_IV/UndistortedPerspectiveTransform_TI12.jpg)
     - Calibration error can be computed using cv2 function "projectionPoints", and taking L2-Norm between the image poinst and output from cv2 function "projectionPoints"
     - The error initially is quite low on the order of magnitude 10^-2, but increases proprotional to the number of images and consequently will be asymptotic. 
     - The calibration error for the given test images inside the "camera_cal" folder is about approximately 2
@@ -58,6 +63,9 @@ Python Code/Implementation: [Link](./MadhavKarri-Project2-Files/Pipeline_Test_Im
   - Gradient-x and y will result in highlighting line-edges features closer to vertical and horizontal directions respectively
 * Apply masking and perspective transform (function: frame_mptw)
   - Masking was applied by picking 4-corner co-ordinates of a trapezoid close enough to the target area on the lane
+  - The perspective transform matrix was determined by picking the right set of source and destination points and cv2 function "getPerspectiveTransform".
+    - For source points the 4-corner co-ordinates of the trapezoidal mask were picked
+    - For detsination points the four corner co-ordinates of the image boundary with margin were selected
 * Find lane starting co-ordinates on X-axis by taking histogram of detected lane line pixels on bottom-half of the warped binary output (function: wi_hp)
   - A histogram of the lane line pixels on the bottom half of the frame/image in the target area will result in two peaks. These two peaks, corresponding to left and right lane lines, can be used as a good starting guess for the sliding window algorithm.
 * Post establishing the starting co-ordinates, of the detected lane line pixels, on x-axis, implement the sliding window algorithm to detect lane line pixels through all of the image/frame (function: find_lane_pixels)
