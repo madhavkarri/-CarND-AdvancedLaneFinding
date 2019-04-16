@@ -122,13 +122,15 @@ Additional Comments
 
 ### Optional Challange
 
-- The pipeline/steps implemented for finding lane lines in a video are similar to finding lane lines on test images
+- The pipeline/steps implemented for finding lane lines for the challenge video are similar to finding lane lines on the project video
   - Implemented a python code to extract raw frames/static images from a video file
   - Implemented a pipeline consisting primarily of 1 main function and all the functions previously listed in the descripition of finding lane lines on test images.
   - Main Function/Wrapper: A while loop that calls all the necessary functions repeatedly on each of the image frames extracted from the original video.
   - Implemented a python code to stich final output frames from the preceeding steps and convert it into a video
   
 Additional Comments
+- First major challenge in this video was to detect/identify and remove the misealding/spurious lane marking as shown below
+![ChallengeVideo_MSLM](./Writeup_IV/ChallengeVideo_MSLM.jpg)
 
 **Final Video Output**
 
