@@ -25,7 +25,7 @@ The goals/steps for this project are:
 
 ---
 
-![Pipeline_TM] (**Finding Lane Lines on Test Images/Frames**)
+[Pipeline_TM] **Finding Lane Lines on Test Images/Frames**
 
 Pipeline for test images (Interactive python file: Pipeline_Test_Images.ipynb)
 
