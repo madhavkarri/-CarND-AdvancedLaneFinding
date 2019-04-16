@@ -49,7 +49,7 @@ Python Code/Implementation: [Link](./MadhavKarri-Project2-Files/Pipeline_Test_Im
 * Post detetction of left and right line pixels through the complete image, a polynomial fit is established for each of the left and right lines (function: fit_polynomial)
 * Implement band/margin search around line position from previous frame, equivalent to using a customized region of interest for each frame of video. In the unlikely case, lost track of the lines, revert back to sliding windows search (function: search_around_poly)
 * Measure radius of curvature for the lane and offset of center of vehicle from center of lane (function: measure_curvature_real)
-* As a last step map/draw the detected lane on to the original undistorted frame/image (function: map_lane_udi)
+* Final Step: Map/Draw detected lane on to the original undistorted frame/image (function: map_lane_udi)
 
 The above set of steps were implemented on the following set of test images
 * Test1.jpg
