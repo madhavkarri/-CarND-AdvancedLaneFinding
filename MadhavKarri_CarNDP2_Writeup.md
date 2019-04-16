@@ -25,7 +25,7 @@ The goals/steps for this project are:
 
 ---
 
-[Pipeline_TM] **Finding Lane Lines on Test Images/Frames**
+**Finding Lane Lines on Test Images/Frames**
 
 Pipeline for test images (Interactive python file: Pipeline_Test_Images.ipynb)
 
@@ -99,25 +99,12 @@ Results from Pipeline for test images on Test3.jpg are shown below:
 
 **Finding Lane Lines in a Video**
 
-- The pipeline/steps implemented for finding lane lines in a video are identical to 
-  - Implemented a python code to extract raw fraemes/static images from a video file
-![Test3_Undistorted](./Writeup_IV/Test3_Undistorted.png)
-
-  - Implemented a pipeline consisting primarily of 1 main function and 3 call-back function definitions:
-    - Function1: "my_ced" that implements Canny Edge Detection 
-      - Input: ".jpg" image file
-      - Output: edges from the Canny Edge Detection algorithm
-    - Function2: "my_mpht" that implements Masking and P-Hough Transform to get line and line-coordinates.
-      - Input: ".jpg" image file, masking coordiantes, and edges output from ("my_ced") Canny Edge Detection algorithm
-      - Output: co-ordinates for all the lines detected by P-Hough Transform and consequently "m-slope" and "b-intercept" parameters
-    - Function3: "my_fld" that implements drawing final lines and adding transperency
-      - Input: ".jpg" image file and co-ordinates of all the lines detected by P-Hough Transform
-      - Output: Original raw image/frame overlayed with detected/predicted lane lines
-      - Extras: In addition this function also adds trasparency and saves the final output as a ".jpg file"
-    - Main Function/Wrapper: A while loop that calls Functions 1, 2, 3 repeatedly on each of the image frames extracted from the original video.
-
+- The pipeline/steps implemented for finding lane lines in a video are similar to finding lane lines on test images
+  - Implemented a python code to extract raw frames/static images from a video file
+  - Implemented a pipeline consisting primarily of 1 main function and all the functions previously listed in the descripition of finding lane lines on test images.
+  - Main Function/Wrapper: A while loop that calls all the necessary functions repeatedly on each of the image frames extracted from the original video.
   - Implemented a python code to stich final output frames from the preceeding steps and convert it into a video
-![WI_SolidWhiteRightV2](./Writeup_IV/WI_SolidWhiteRightV2.png)
+Additional Comments
 
 **Final Video Output**
 
@@ -125,9 +112,6 @@ Results from Pipeline for test images on Test3.jpg are shown below:
    - Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/Porject1Video-SolidWhiteRight/solidWhiteRight-mp4.ipynb)
    - Video Output File: [Link](./Writeup_IV/solidWhiteRight_fo.mp4)
 
-  - Solid Yellow Left
-    - Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/Porject1Video-SolidWhiteRight/solidYellowLeft-mp4.ipynb)
-    - Video Output File: [Link](./Writeup_IV/solidYellowLeft_fo.mp4) 
       
 ---
 
