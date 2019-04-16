@@ -111,7 +111,9 @@ Additional Comments
 
  - Project Video
    - Python Code/Implementation: [Link](./Writeup_IV/Pipeline_Project_Video.ipynb)
-   - Video Output File: [Link](https://youtu.be/wEArUuQCSfM)
+   - Video Output File: 
+   [![Project_Video](https://img.youtube.com/vi/wEArUuQCSfM/0.jpg)]
+   (https://youtu.be/wEArUuQCSfM)
 
       
 ---
