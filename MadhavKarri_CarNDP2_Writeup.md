@@ -28,6 +28,7 @@ The goals/steps for this project are:
 **Finding Lane Lines on Test Images/Frames**
 
 Pipeline for test images (Interactive python file: Pipeline_Test_Images.ipynb)
+Python Code/Implementation: [Link](./MadhavKarri-Project2-Files/Pipeline_Test_Images.ipynb)
 
 * Load all neceaary python imports (cell: 1)
 * Implement Camera Calibration (cell: 2)
@@ -45,7 +46,7 @@ Pipeline for test images (Interactive python file: Pipeline_Test_Images.ipynb)
 * Measure radius of curvature for the lane and offset of center of vehicle from center of lane (function: measure_curvature_real)
 * As a last step map/draw the detected lane on to the original undistorted frame/image (function: map_lane_udi)
 
-The above set of steps were repeated on the following set of images
+The above set of steps were implemented on the following set of test images
 * Test1.jpg
 * Test2.jpg
 * Test3.jpg
@@ -55,17 +56,15 @@ The above set of steps were repeated on the following set of images
 * Straight_lines1.jpg
 * Straight_lines2.jpg
 
-Results for solid-white-right:
-
-Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidWhiteRight-Copy1.ipynb)
-
-![WI_SolidYellowCurve24](./Writeup_IV/WI_SolidYellowCurve24.png)
+Results from Pipeline for test images on Test 3.jpg are shown below:
+* Applying camera matrix and distortion coefficients to undistort each frame (function: frame_ud)
+![Test3_Undistorted](./Writeup_IV/Test3_Undistorted.png)
 
 **Finding Lane Lines in a Video**
 
 - Following are the pipeline/steps implemented for finding lane lines in a video
   - Implemented a python code to extract raw fraemes/static images from a video file
-![WI_SolidWhiteRightV1](./Writeup_IV/WI_SolidWhiteRightV1.png)
+![Test3_Undistorted](./Writeup_IV/Test3_Undistorted.png)
 
   - Implemented a pipeline consisting primarily of 1 main function and 3 call-back function definitions:
     - Function1: "my_ced" that implements Canny Edge Detection 
