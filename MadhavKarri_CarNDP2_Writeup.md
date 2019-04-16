@@ -97,7 +97,7 @@ Results from Pipeline for test images on Test3.jpg are shown below:
 * Final Step: Map/Draw detected lane on to the original undistorted frame/image (function: map_lane_udi)
 ![Test3_LDetect](./Writeup_IV/Test3_LDetect.jpg)
 
-**Finding Lane Lines in a Video**
+**Finding Lane Lines in a Video (Project_Video)**
 
 - The pipeline/steps implemented for finding lane lines in a video are similar to finding lane lines on test images
   - Implemented a python code to extract raw frames/static images from a video file
@@ -113,9 +113,25 @@ Additional Comments
    - Python Code/Implementation: [Link](./Writeup_IV/Pipeline_Project_Video.ipynb)
    - Video Output File: [Link](https://youtu.be/wEArUuQCSfM)
 
-      
 ---
 
+### Optional Challange
+
+- The pipeline/steps implemented for finding lane lines in a video are similar to finding lane lines on test images
+  - Implemented a python code to extract raw frames/static images from a video file
+  - Implemented a pipeline consisting primarily of 1 main function and all the functions previously listed in the descripition of finding lane lines on test images.
+  - Main Function/Wrapper: A while loop that calls all the necessary functions repeatedly on each of the image frames extracted from the original video.
+  - Implemented a python code to stich final output frames from the preceeding steps and convert it into a video
+  
+Additional Comments
+
+**Final Video Output**
+
+ - Challenge Video
+   - Python Code/Implementation: [Link](./Writeup_IV/Pipeline_Challenge_Video.ipynb)
+   - Video Output File: [Link](https://youtu.be/jzV-YqbOaFw)
+   - Video Output File: [Link]((./Writeup_IV/ChallengeVideo_fo.mp4)
+  
 ### Reflection
 
 ### Potential shortcomings with the current pipeline
@@ -132,10 +148,4 @@ Additional Comments
 - Using mapping and localization explore possibility to detect and utilize priori information on lane coordinates and curvature
 - Currently in the videos the lane detection lines are bumpy. The bumpiness can be minimized by adding weights during averaging of slopes. 
 
-### Optional Challange
-- Code that produced SolidYellowLeft.mp4 was attempted to detect lane lines. Although, it performed well on a good number of frames, it had issues detecting lane lines over the bridge.
-- Tried modifying different parameters and found out converting the original raw image/frame using color space conversion code to hsv within cv2.cvtcolor resulted in optimal detection of the yellow and white lanes through all the frames in the video
-- Solid Yellow Left
-  - Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/Porject1Video-Challenge/Challenge-mp4.ipynb)
-  - Video Output File: [Link](./Writeup_IV/Challenge_fo.mp4)
 
