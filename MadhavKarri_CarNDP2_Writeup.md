@@ -137,6 +137,7 @@ Additional Comments
 - The subtraction was performed post applying - Gradient, Gradient Magnitude, and Gradient Direction Thresholds
 - Second major challenge in this video was to detect/identify and remove shadow that was making the yellow and white lane line markings as shown below
 ![cv_frame130](./Writeup_IV/cv_frame130.jpg)
+- The shadow region under the bridge was addressed through a combination of HSV and RGB colorspaces and CLAHE (Contrast Limited Adaptive Histogram Equalization) algorithm
 
 **Challenge Video Output**
 
@@ -157,6 +158,5 @@ Additional Comments
   - To pick optimal co-ordinates for masking
   - For the prior detection of shadows, high brightness scenarios that masks yellow/white lane line markings
 - Using mapping and localization explore possibility to detect and utilize priori information on lane coordinates and curvature
-- Impelement an shadow detection algorithm such as 
-  - [Link](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.95.3832&rep=rep1&type=pdf)
+- Impelement an shadow detection algorithm such as [Link](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.95.3832&rep=rep1&type=pdf)
 
