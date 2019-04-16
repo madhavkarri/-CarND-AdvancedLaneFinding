@@ -33,6 +33,17 @@ Python Code/Implementation: [Link](./MadhavKarri-Project2-Files/Pipeline_Test_Im
 
 * Load all neceaary python imports (cell: 1)
 * Implement Camera Calibration (cell: 2)
+  - Camera calibration was performed using provided chess board images
+  - Recommended number of images for a good calibration is about 20
+  - However, few of the provided images, images 1,4 and 5, did not fit/match 9X6 pattern
+  - Sequence of steps followed for camera calibration:
+    - Convert image to grayscale
+    - Find corners of chessboard using cv2 function "findchessboardcorners"
+    - Create object points in 3d plane and image points. Image points are corners of the chessboard determined in the previous step
+    - Calibrate camera using object points and image points using cv2 function "calibrateCamera"
+    - "calibrateCamera" function outputs camera calibration matrix and distortion coefficients
+    - The original image can be undistorted using camera calibration matrix and distortion coefficients
+    - Calibration error can be computed using cv2 function "projectionPoints", and taking L2-Norm between the image poinst and output from cv2 function "projectionPoints"
 * Apply camera matrix and distortion coefficients to undistort each frame (function: frame_ud)
 * Apply color selection binary by thresholding S-channel of HLS color space (function: hls_select)
   - HLS Color Space with S-Channel was determined to be the appropriate binary for detecting yellow lane lines under varying brightness or shades
