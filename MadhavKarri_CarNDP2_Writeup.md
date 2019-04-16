@@ -28,13 +28,14 @@ The goals/steps for this project are:
 **Finding Lane Lines on Test Images/Frames**
 
 Pipeline for test images (Interactive python file: Pipeline_Test_Images.ipynb)
+
 Python Code/Implementation: [Link](./MadhavKarri-Project2-Files/Pipeline_Test_Images.ipynb)
 
 * Load all neceaary python imports (cell: 1)
 * Implement Camera Calibration (cell: 2)
 * Apply camera matrix and distortion coefficients to undistort each frame (function: frame_ud)
-* Apply color selection binary by thresholding S-channel of HLS (function: hls_select)
-- Apply gradient, gradient-magnitude, and gradient-direction using sobel operator
+* Apply color selection binary by thresholding S-channel of HLS color space (function: hls_select)
+- Apply gradient, gradient-magnitude, and gradient-direction thresholds using sobel operator
   - Gradient Threshold (function: grad_thresh)
   - Gradient Magnitude Threshold (function: mag_thresh)
   - Gradient Direction Threshold (function: dir_thresh)
@@ -57,8 +58,12 @@ The above set of steps were implemented on the following set of test images
 * Straight_lines2.jpg
 
 Results from Pipeline for test images on Test3.jpg are shown below:
-* Applying camera matrix and distortion coefficients to undistort each frame (function: frame_ud)
+* Applying camera matrix and distortion coefficients to undistort each frame
 ![Test3_Undistorted](./Writeup_IV/Test3_Undistorted.jpg)
+* Apply color selection binary by thresholding S-channel of HLS color space
+![Test3_HLSBinary](./Writeup_IV/Test3_HLSBinary.jpg)
+* Apply gradient, gradient-magnitude, and gradient-direction thresholds using sobel operator
+![Test3_GMDBinary](./Writeup_IV/Test3_GMDBinary.jpg)
 
 **Finding Lane Lines in a Video**
 
