@@ -25,7 +25,7 @@ The goals/steps for this project are:
 
 ---
 
-**Finding Lane Lines on Test Images/Frames**
+![Pipeline_TM] **Finding Lane Lines on Test Images/Frames**
 
 Pipeline for test images (Interactive python file: Pipeline_Test_Images.ipynb)
 
@@ -99,7 +99,7 @@ Results from Pipeline for test images on Test3.jpg are shown below:
 
 **Finding Lane Lines in a Video**
 
-- Following are the pipeline/steps implemented for finding lane lines in a video
+- The pipeline/steps implemented for finding lane lines in a video are identical to 
   - Implemented a python code to extract raw fraemes/static images from a video file
 ![Test3_Undistorted](./Writeup_IV/Test3_Undistorted.png)
 
