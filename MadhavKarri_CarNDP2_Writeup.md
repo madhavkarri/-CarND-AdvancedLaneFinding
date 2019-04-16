@@ -135,8 +135,8 @@ Additional Comments
 ![UD_HSV17](./Writeup_IV/UD_HSV17.jpg)
 - The solution was to subtract the HSV binary from the undistorted image to remove the misealding/spurious lane markings
 - The subtraction was performed post applying - Gradient, Gradient Magnitude, and Gradient Direction Thresholds
--Second major challenge in this video was to detect/identify and remove shadow that was making the yellow and white lane line markings as shown below
-
+- Second major challenge in this video was to detect/identify and remove shadow that was making the yellow and white lane line markings as shown below
+![cv_frame130](./Writeup_IV/cv_frame130.jpg)
 
 **Challenge Video Output**
 
