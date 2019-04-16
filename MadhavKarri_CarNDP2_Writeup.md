@@ -109,9 +109,9 @@ Additional Comments
 
 **Final Video Output**
 
- - Solid White Right
-   - Python Code/Implementation: [Link](./MadhavKarri-Project2-Files/Porject2Video-?/.ipynb)
-   - Video Output File: [Link](./Writeup_IV/.mp4)
+ - Project Video
+   - Python Code/Implementation: [Link](./Writeup_IV/Pipeline_Project_Video.ipynb)
+   - Video Output File: [Link](https://youtu.be/wEArUuQCSfM)
 
       
 ---
