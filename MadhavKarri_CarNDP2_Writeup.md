@@ -70,6 +70,17 @@ Results from Pipeline for test images on Test3.jpg are shown below:
 ![Test3_GMDBinary](./Writeup_IV/Test3_GMDBinary.jpg)
 * Apply masking and perspective transform
 ![Test3_MPTBinary](./Writeup_IV/Test3_MPTBinary.jpg)
+* Find lane starting co-ordinates on X-axis by taking histogram of detected lane line pixels on bottom-half of the warped binary output
+![Test3_HPeaks](./Writeup_IV/Test3_HPeaks.jpg)
+* Implement sliding window algorithm to detect lane line pixels through all of the image/frame 
+* Perform a polynomial fit on the detetcted lane line pixels for each of the left and right lines
+![Test3_SWPF](./Writeup_IV/Test3_SWPF.jpg)
+* Implement band/margin search around previously detected left and right lines from previous frame
+![Test3_SAPC](./Writeup_IV/Test3_SAPC.jpg)
+* Measure radius of curvature for the lane and offset of center of vehicle from center of lane
+![Test3_CurvRad](./Writeup_IV/Test3_CurvRad.jpg)
+* Final Step: Map/Draw detected lane on to the original undistorted frame/image (function: map_lane_udi)
+![Test3_LDetect](./Writeup_IV/Test3_LDetect.jpg)
 
 **Finding Lane Lines in a Video**
 
