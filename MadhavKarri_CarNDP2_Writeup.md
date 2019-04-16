@@ -134,7 +134,8 @@ Additional Comments
 - The misealding/spurious lane marking are detected using HSV colorspace. By adjusting the thresholds, the HSV binary was able to detect all the lanes and its features except for the yelllow and white lane markings. The result is shown below
 ![UD_HSV17](./Writeup_IV/UD_HSV17.jpg)
 - The solution was to subtract the HSV binary from the undistorted image to remove the misealding/spurious lane markings
-- The subtraction was performed post applying   - Gradient, Gradient Magnitude, and Gradient Direction Thresholds
+- The subtraction was performed post applying - Gradient, Gradient Magnitude, and Gradient Direction Thresholds
+-Second major challenge in this video was to detect/identify and remove shadow that was making the yellow and white lane line markings as shown below
 
 
 **Challenge Video Output**
@@ -149,15 +150,13 @@ Additional Comments
 ### Potential shortcomings with the current pipeline
 - A lot of manual processing is involved with the exisiting pipeline.
   - Manual picking of masking co-ordinates
-  - Fine tuning parameters for each of the Gaussian Blur/Canny Edge Detection/Masking/P-Hough Transform steps, specifically on each individual frames
-  - Spurious or unwanted slopes, when segregating slopes to detect line segments associated with each of the left and right lanes
+  - Fine tuning parameters for each of the thersholds based on the change in frame scene: shadows, brightness, etc.
 
 ### Possible improvements to pipeline
-- Research/Implement detection of arc/curvature line segments available in opencv
 - Automate the process either through Machine Learning/AI for the following set of tasks
   - To pick optimal co-ordinates for masking
-  - To reject spurious or unwanted slopes during slope segregation to identiyf left and right lanes
+  - For the prior detection of shadows, high brightness scenarios that masks yellow/white lane line markings
 - Using mapping and localization explore possibility to detect and utilize priori information on lane coordinates and curvature
-- Currently in the videos the lane detection lines are bumpy. The bumpiness can be minimized by adding weights during averaging of slopes. 
-
+- Impelement an shadow detection algorithm such as 
+  - [Link](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.95.3832&rep=rep1&type=pdf)
 
