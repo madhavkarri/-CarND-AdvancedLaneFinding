@@ -112,7 +112,7 @@ Additional Comments
 - Surprisingly, the video output without averaging performed better than the one with averaging. Likely cause might be the number of frames being considered for averaging might be too high
 - The below final output video is one without averaging
 
-**Final Video Output**
+**Project Video Output**
 
  - Project Video
    - Python Code/Implementation: [Link](./Writeup_IV/Pipeline_Project_Video.ipynb)
@@ -129,10 +129,15 @@ Additional Comments
   - Implemented a python code to stich final output frames from the preceeding steps and convert it into a video
   
 Additional Comments
-- First major challenge in this video was to detect/identify and remove the misealding/spurious lane marking as shown below
+- First major challenge in this video was to detect/identify and remove the misealding/spurious lane markings as shown below
 ![ChallengeVideo_MSLM](./Writeup_IV/ChallengeVideo_MSLM.jpg)
+- The misealding/spurious lane marking are detected using HSV colorspace. By adjusting the thresholds, the HSV binary was able to detect all the lanes and its features except for the yelllow and white lane markings. The result is shown below
+![UD_HSV17](./Writeup_IV/UD_HSV17.jpg)
+- The solution was to subtract the HSV binary from the undistorted image to remove the misealding/spurious lane markings
+- The subtraction was performed post applying   - Gradient, Gradient Magnitude, and Gradient Direction Thresholds
 
-**Final Video Output**
+
+**Challenge Video Output**
 
  - Challenge Video
    - Python Code/Implementation: [Link](./Writeup_IV/Pipeline_Challenge_Video.ipynb)
