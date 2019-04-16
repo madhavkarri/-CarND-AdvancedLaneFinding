@@ -106,6 +106,11 @@ Results from Pipeline for test images on Test3.jpg are shown below:
   - Implemented a python code to stich final output frames from the preceeding steps and convert it into a video
   
 Additional Comments
+- A line class has been implemented which keeps tracks of all the line charachteristics (fit coefficients, radius of curvature, vehicle center offset, etc.) between frames
+- An attempt has been made to avergae the polynomial fit coefficients  between n frames. The averaging has been performed such that for the nth frame, frames from n-10 to n+10 were used to average the polynomial coefficients.
+- Smoothing: the objective of the averaging technique was to minimize the jumping of lane lines from frame to frame
+- Surprisingly, the video output without averaging performed better than the one with averaging. Likely cause might be the number of frames being considered for averaging might be too high
+- The below final output video is one without averaging
 
 **Final Video Output**
 
