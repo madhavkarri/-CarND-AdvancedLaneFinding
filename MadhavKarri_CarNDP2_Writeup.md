@@ -44,6 +44,10 @@ Python Code/Implementation: [Link](./MadhavKarri-Project2-Files/Pipeline_Test_Im
     - "calibrateCamera" function outputs camera calibration matrix and distortion coefficients
     - The original image can be undistorted using camera calibration matrix and distortion coefficients
     - Calibration error can be computed using cv2 function "projectionPoints", and taking L2-Norm between the image poinst and output from cv2 function "projectionPoints"
+    - The error initially is quite low on the order of magnitude 10^-2, but increases proprotional to the number of images and consequently will be asymptotic. 
+    - The calibration error for the given test images inside the "camera_cal" folder is about approximately 2
+    - The resulting camera matrix and distortion coefficients are as follows
+    ![CameraCal_CMDC](./Writeup_IV/CameraCal_CMDC.jpg)
 * Apply camera matrix and distortion coefficients to undistort each frame (function: frame_ud)
 * Apply color selection binary by thresholding S-channel of HLS color space (function: hls_select)
   - HLS Color Space with S-Channel was determined to be the appropriate binary for detecting yellow lane lines under varying brightness or shades
