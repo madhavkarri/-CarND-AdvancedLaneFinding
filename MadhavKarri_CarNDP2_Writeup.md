@@ -56,9 +56,9 @@ The above set of steps were implemented on the following set of test images
 * Straight_lines1.jpg
 * Straight_lines2.jpg
 
-Results from Pipeline for test images on Test 3.jpg are shown below:
+Results from Pipeline for test images on Test3.jpg are shown below:
 * Applying camera matrix and distortion coefficients to undistort each frame (function: frame_ud)
-![Test3_Undistorted](./Writeup_IV/Test3_Undistorted.png)
+![Test3_Undistorted](./Writeup_IV/Test3_Undistorted.jpg)
 
 **Finding Lane Lines in a Video**
 
