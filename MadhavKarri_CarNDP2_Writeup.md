@@ -130,7 +130,7 @@ Additional Comments
  - Challenge Video
    - Python Code/Implementation: [Link](./Writeup_IV/Pipeline_Challenge_Video.ipynb)
    - Video Output File: [Link](https://youtu.be/jzV-YqbOaFw)
-   - Video Output File: [Link]((./Writeup_IV/ChallengeVideo_fo.mp4)
+   - Video Output File: [Link](./Writeup_IV/ChallengeVideo_fo.mp4)
   
 ### Reflection
 
