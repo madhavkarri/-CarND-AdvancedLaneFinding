@@ -1,5 +1,5 @@
-# **Self-Driving Car Engineer Nanodegree**
-# **Project2: Advanced Lane Finding**
+# **Self-Driving Car Engineer**
+# **Project: Advanced Lane Finding**
 
 ## MK
 
