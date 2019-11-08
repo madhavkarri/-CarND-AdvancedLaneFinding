@@ -14,21 +14,13 @@ The goals/steps for this project are:
 * Determine curvature of the lane and vehicle position with respect to center
 * Warp the detected lane boundaries back onto the original image
 * Output visual display of lane boundaries and numerical estimation of lane curvature and vehicle position
-* Make a pipeline to implement the above set of steps on all frames from the video
-
----
-
-## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
-
-### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
+* Make a pipeline to implement the above set of steps on all frames from the video  
 
 ---
 
 **Finding Lane Lines on Test Images/Frames**
 
-Pipeline for test images (Interactive python file: Pipeline_Test_Images.ipynb)
-
-Python Code/Implementation: [Link](./MadhavKarri-Project2-Files/Pipeline_Test_Images.ipynb)
+Pipeline and Python Code/Implementation: [Link](./MadhavKarri-Project2-Files/Pipeline_Test_Images.ipynb)
 
 * Load all neceaary python imports (cell: 1)
 * Implement Camera Calibration (cell: 2)
