@@ -1,21 +1,20 @@
-# **Self-Driving Car Engineer**
+# **Self-Driving Car**
 # **Project: Advanced Lane Finding**
 
 ## MK
 
 The goals/steps for this project are:
 
-* Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.
-* Apply a distortion correction to raw images.
-* Use color transforms, gradients, etc., to create a thresholded binary image.
-* Apply a perspective transform to rectify binary image ("birds-eye view").
-* Detect lane pixels (using histogram peaks) and polynomial fit to find the lane boundary.
-* Implement margin/band search based on curve fits from previous frame.
-* Determine the curvature of the lane and vehicle position with respect to center.
-* Warp the detected lane boundaries back onto the original image.
-* Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
-* Make a pipeline to implement the above set of steps on all of the frames from the video.
-* Reflect on your work in a written report
+* Compute camera calibration matrix and distortion coefficients given a set of chessboard images
+* Apply a distortion correction to raw images
+* Use color transforms, gradients, etc., to create a thresholded binary image
+* Apply a perspective transform to rectify binary image ("birds-eye view")
+* Detect lane pixels (using histogram peaks) and polynomial fit to find the lane boundary
+* Implement margin/band search based on curve fits from previous frame
+* Determine curvature of the lane and vehicle position with respect to center
+* Warp the detected lane boundaries back onto the original image
+* Output visual display of lane boundaries and numerical estimation of lane curvature and vehicle position
+* Make a pipeline to implement the above set of steps on all frames from the video
 
 ---
 
