@@ -16,7 +16,9 @@ The goals/steps for this project are:
 * Output visual display of lane boundaries and numerical estimation of lane curvature and vehicle position
 * Make a pipeline to implement the above set of steps on all frames from the video  
 
-#### **Finding Lane Lines on Test Images/Frames**
+---
+
+**Finding Lane Lines on Test Images/Frames**
 
 Pipeline and Python Code/Implementation: [Link](./MadhavKarri-Project2-Files/Pipeline_Test_Images.ipynb)
 
