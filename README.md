@@ -69,7 +69,7 @@ p_cdist = np.asarray([[-0.24688572, -0.02372824, -0.00109832,  0.00035104, -0.00
   - The perspective transform matrix was determined by picking the right set of source and destination points and cv2 function "getPerspectiveTransform".
     - For source points the 4-corner co-ordinates of the trapezoidal mask were picked
     - For detsination points the four corner co-ordinates of the image boundary with margin were selected
-* Find lane starting co-ordinates on X-axis by taking histogram of detected lane line pixels on bottom-half of the warped binary output (function: wi_hp)
+* Find, lane starting co-ordinates on X-axis, by taking histogram of detected lane line pixels on bottom-half of the warped binary output (function: wi_hp)
   - A histogram of the lane line pixels on the bottom half of the frame/image in the target area will result in two peaks. These two peaks, corresponding to left and right lane lines, can be used as a good starting guess for the sliding window algorithm.
 * Post establishing the starting co-ordinates, of the detected lane line pixels, on x-axis, implement the sliding window algorithm to detect lane line pixels through all of the image/frame (function: find_lane_pixels)
 * Post detetction of left and right line pixels through the complete image, a polynomial fit is established for each of the left and right lines (function: fit_polynomial)
@@ -104,7 +104,15 @@ Results from Pipeline for test images on Test3.jpg are shown below:
 * Implement band/margin search around previously detected left and right lines from previous frame
 ![Test3_SAPC](./Writeup_IV/Test3_SAPC.jpg)
 * Measure radius of curvature for the lane and offset of center of vehicle from center of lane
-![Test3_CurvRad](./Writeup_IV/Test3_CurvRad.jpg)
+```python
+Left_CurvRad (pix): 991.7478794416633
+Right_CurvRad (pix): 1081.3782352639437
+Left_CurvRad (m): 459.77738066093303
+Right_CurvRad (m): 403.40458309695026
+Lane_CurvRad (m): 431.59098187894165
+Lane Offset (m): -0.11897318631184861
+Vehicle Position (m): Vehicle is 0.119m right of center
+```
 * Final Step: Map/Draw detected lane on to the original undistorted frame/image (function: map_lane_udi)
 ![Test3_LDetect](./Writeup_IV/Test3_LDetect.jpg)
 
