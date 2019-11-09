@@ -26,13 +26,13 @@ Pipeline and Python Code/Implementation: [Link](./P2_Files/Pipeline_Test_Images.
 * Implement Camera Calibration (cell: 2)
   - Camera calibration was performed using provided chess board images
   - Recommended number of images for a good calibration is about 20
-  - However, few of the provided images, images 1,4 and 5, did not fit/match 9X6 pattern
+  - However, few of the provided images, 1, 4 and 5, did not fit/match 9X6 pattern
   - Sequence of steps followed for camera calibration:
     - Convert image to grayscale
     - Find corners of chessboard using cv2 function "findchessboardcorners"
     - Example: find chessboard corners-calibration12.jpg
     ![FindChessboardCorners_TI12](./Writeup_IV/FindChessboardCorners_TI12.jpg)
-    - Create object points in 3d plane and image points. Image points are corners of the chessboard determined in the previous step
+    - Create object points (in 3d plane) and image points. Image points are corners of the chessboard determined in the previous step
     - Calibrate camera using object points and image points using cv2 function "calibrateCamera"
     - "calibrateCamera" function outputs camera calibration matrix and distortion coefficients
     - The original image can be undistorted using camera calibration matrix and distortion coefficients
@@ -43,7 +43,19 @@ Pipeline and Python Code/Implementation: [Link](./P2_Files/Pipeline_Test_Images.
     - The error initially is quite low on the order of magnitude 10^-2, but increases proprotional to the number of images and consequently will be asymptotic. 
     - The calibration error for the given test images inside the "camera_cal" folder is about approximately 2
     - The resulting camera matrix and distortion coefficients are as follows
-    ![CameraCal_CMDC](./Writeup_IV/CameraCal_CMDC.jpg)
+
+```python
+# camera matrix and distortion coefficients
+# values from running previous cell on images from "camera_cal" folder
+# camera matrix
+p_cmtx = np.asarray([[1.15777829e+03, 0.00000000e+00, 6.67113866e+02],
+         [0.00000000e+00, 1.15282230e+03, 3.86124658e+02],
+         [0.00000000e+00, 0.00000000e+00, 1.00000000e+00]])
+# distortion coefficeints
+p_cdist = np.asarray([[-0.24688572, -0.02372824, -0.00109832,  0.00035104, -0.00260433]])
+
+```
+
 * Apply camera matrix and distortion coefficients to undistort each frame (function: frame_ud)
 * Apply color selection binary by thresholding S-channel of HLS color space (function: hls_select)
   - HLS Color Space with S-Channel was determined to be the appropriate binary for detecting yellow lane lines under varying brightness or shades
