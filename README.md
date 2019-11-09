@@ -78,14 +78,7 @@ p_cdist = np.asarray([[-0.24688572, -0.02372824, -0.00109832,  0.00035104, -0.00
 * Final Step: Map/Draw detected lane on to the original undistorted frame/image (function: map_lane_udi)
 
 The above set of steps were implemented on the following set of test images
-* Test1.jpg
-* Test2.jpg
-* Test3.jpg
-* Test4.jpg
-* Test5.jpg
-* Test6.jpg
-* Straight_lines1.jpg
-* Straight_lines2.jpg
+* Test1.jpg * Test2.jpg * Test3.jpg * Test4.jpg * Test5.jpg * Test6.jpg * Straight_lines1.jpg * Straight_lines2.jpg
 
 Results from Pipeline for test images on Test3.jpg are shown below:
 * Applying camera matrix and distortion coefficients to undistort each frame
