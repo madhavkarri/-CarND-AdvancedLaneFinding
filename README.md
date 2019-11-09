@@ -104,8 +104,7 @@ Results from Pipeline for test images on Test3.jpg are shown below:
 * Implement band/margin search around previously detected left and right lines from previous frame
 ![Test3_SAPC](./Writeup_IV/Test3_SAPC.jpg)
 * Measure radius of curvature for the lane and offset of center of vehicle from center of lane
-```Python
-
+```
 Left_CurvRad (pix): 991.7478794416633
 Right_CurvRad (pix): 1081.3782352639437
 Left_CurvRad (m): 459.77738066093303
@@ -113,7 +112,6 @@ Right_CurvRad (m): 403.40458309695026
 Lane_CurvRad (m): 431.59098187894165
 Lane Offset (m): -0.11897318631184861
 Vehicle Position (m): Vehicle is 0.119m right of center
-
 ```
 * Final Step: Map/Draw detected lane on to the original undistorted frame/image (function: map_lane_udi)
 ![Test3_LDetect](./Writeup_IV/Test3_LDetect.jpg)
